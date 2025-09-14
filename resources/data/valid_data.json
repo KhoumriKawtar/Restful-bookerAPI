@@ -1,0 +1,78 @@
+{
+  "valid_bookings": [
+    {
+      "firstname": "John",
+      "lastname": "Doe",
+      "totalprice": 111,
+      "depositpaid": true,
+      "bookingdates": {
+        "checkin": "2023-01-01",
+        "checkout": "2023-01-02"
+      },
+      "additionalneeds": "Breakfast"
+    },
+    {
+      "firstname": "Jane",
+      "lastname": "Smith",
+      "totalprice": 250,
+      "depositpaid": false,
+      "bookingdates": {
+        "checkin": "2023-02-15",
+        "checkout": "2023-02-20"
+      },
+      "additionalneeds": "Late checkout"
+    },
+    {
+      "firstname": "Bob",
+      "lastname": "Wilson",
+      "totalprice": 89,
+      "depositpaid": true,
+      "bookingdates": {
+        "checkin": "2023-03-10",
+        "checkout": "2023-03-12"
+      },
+      "additionalneeds": "Extra bed"
+    }
+  ],
+  "search_criteria": [
+    {
+      "firstname": "John"
+    },
+    {
+      "lastname": "Smith"
+    },
+    {
+      "checkin": "2023-01-01"
+    },
+    {
+      "checkout": "2023-12-31"
+    },
+    {
+      "firstname": "Jane",
+      "lastname": "Smith"
+    }
+  ],
+  "partial_updates": [
+    {
+      "firstname": "UpdatedFirst"
+    },
+    {
+      "lastname": "UpdatedLast"
+    },
+    {
+      "totalprice": 999
+    },
+    {
+      "depositpaid": false
+    },
+    {
+      "additionalneeds": "Updated needs"
+    },
+    {
+      "bookingdates": {
+        "checkin": "2023-12-01",
+        "checkout": "2023-12-05"
+      }
+    }
+  ]
+  }

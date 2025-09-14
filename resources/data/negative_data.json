@@ -1,0 +1,97 @@
+{
+  "invalid_bookings": [
+    {
+      "description": "Missing firstname",
+      "data": {
+        "lastname": "Test",
+        "totalprice": 100,
+        "depositpaid": true,
+        "bookingdates": {
+          "checkin": "2023-01-01",
+          "checkout": "2023-01-02"
+        }
+      },
+      "expected_status": 400
+    },
+    {
+      "description": "Missing lastname",
+      "data": {
+        "firstname": "Test",
+        "totalprice": 100,
+        "depositpaid": true,
+        "bookingdates": {
+          "checkin": "2023-01-01",
+          "checkout": "2023-01-02"
+        }
+      },
+      "expected_status": 400
+    },
+    {
+      "description": "Negative price",
+      "data": {
+        "firstname": "Test",
+        "lastname": "User",
+        "totalprice": -50,
+        "depositpaid": true,
+        "bookingdates": {
+          "checkin": "2023-01-01",
+          "checkout": "2023-01-02"
+        }
+      },
+      "expected_status": 400
+    },
+    {
+      "description": "Invalid price type",
+      "data": {
+        "firstname": "Test",
+        "lastname": "User",
+        "totalprice": "invalid_price",
+        "depositpaid": true,
+        "bookingdates": {
+          "checkin": "2023-01-01",
+          "checkout": "2023-01-02"
+        }
+      },
+      "expected_status": 400
+    },
+    {
+      "description": "Invalid deposit type",
+      "data": {
+        "firstname": "Test",
+        "lastname": "User",
+        "totalprice": 100,
+        "depositpaid": "maybe",
+        "bookingdates": {
+          "checkin": "2023-01-01",
+          "checkout": "2023-01-02"
+        }
+      },
+      "expected_status": 400
+    }
+  ],
+  "invalid_dates": [
+    "2023/01/01",
+    "01-01-2023",
+    "2023.01.01",
+    "invalid_date",
+    "2023-13-01",
+    "2023-01-32",
+    "2023-02-30",
+    "not-a-date",
+    "2023-1-1",
+    "23-01-01"
+  ],
+  "invalid_ids": [
+    "invalid_id",
+    "abc123",
+    "-1",
+    "0",
+    "999999999",
+    "null",
+    "undefined",
+    "",
+    " ",
+    "!@#$%"
+  ]
+
+  }
