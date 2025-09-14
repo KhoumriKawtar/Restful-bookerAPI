@@ -39,7 +39,7 @@ jobs:
 
       # Step 5: Upload test results
       - name: Upload Robot Framework results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: robot-results
           path: reports/
